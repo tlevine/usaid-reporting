@@ -36,4 +36,6 @@ for extension in pbm ppm
   done
 done
 
-sed 'some-regex-here' "$file"|head -n1
+sed -n \
+  '/[A-Z]\{1,4\}-[A-Z]\{1,4\}-[0-9]\{1,4\}-[0-9]\{1,4\}-[0-9]\{1,7\}-[0-9]\{1,4\}/p' \
+  "$FILE.txt"
