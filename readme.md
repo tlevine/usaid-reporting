@@ -115,3 +115,23 @@ Here are the column headers in the metadata coming from DEC searches.
 * Language_of_Text_t_date
 
 Which ones might work?
+
+
+
+## What's consistent reporting?
+
+### Are projects reported?
+People get a cheque and there's a contract,
+and they''re supposed to write a report about what they did.
+
+For every contract, which has an award number
+(unique identifier), there should be a report.
+
+Here's a fun question:
+Which projects have at least one associated report?
+
+Issues with that:
+
+* Not all reports list the award number
+  * (Tom thinks that maybe they should.)
+  * They're required to
