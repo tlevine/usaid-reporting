@@ -8,34 +8,37 @@ if [ ! -f "$FILE" ]; then
   exit 1
 fi
 
-# Extract images.
-# Use jpeg so we don't have to determine whether ppm or pbm is used.
-pdfimages "$FILE" "$FILE"
+if [ ! -f "$FILE.txt" ]; then
+  # Extract images.
+  # Use jpeg so we don't have to determine whether ppm or pbm is used.
+  pdfimages "$FILE" "$FILE"
 
-# Extract text to `echo $FILE|sed s/pdf$/txt/`
-pdftotext "$FILE"
-mv "`echo \"$FILE\"|sed s/pdf$/txt/`" "$FILE.txt"
+  # Extract text to `echo $FILE|sed s/pdf$/txt/`
+  pdftotext "$FILE"
+  mv "`echo \"$FILE\"|sed s/pdf$/txt/`" "$FILE.txt"
 
-# OCR
-for extension in pbm ppm
-  do
-  for file in "$FILE"-[0-9][0-9][0-9]."${extension}"
+  # OCR
+  for extension in pbm ppm
     do
+    for file in "$FILE"-[0-9][0-9][0-9]."${extension}"
+      do
 
-    # In case no files match this glob
-    [ -e $file ] || continue
+      # In case no files match this glob
+      [ -e $file ] || continue
 
-    echo $file
+      echo $file
 
-    # Ignore errors because it always has errors.
-    tesseract "$file" "$file" -l eng &&
-      cat "$file.txt" >> "$FILE.txt" || sleep 0
+      # Ignore errors because it always has errors.
+      tesseract "$file" "$file" -l eng &&
+        cat "$file.txt" >> "$FILE.txt" || sleep 0
 
-    # Do only the first page.
-    break
+      # Do only the first page.
+      break
+    done
   done
-done
+fi
 
+echo __
 sed -n \
-  's/^.*\([A-Z]\{1,4\}-[A-Z]\{1,4\}-[0-9]\{1,4\}-[0-9]\{1,4\}-[0-9]\{1,7\}-[0-9]\{1,4\}\).*$/\1/p' \
+  's/^(?:[^A-Z]*)?*\([A-Z]\{1,4\}-[A-Z]\{1,4\}-[0-9]\{1,4\}-[0-9]\{1,4\}-[0-9]\{1,7\}-[0-9]\{1,4\}\).*$/\1/p' \
   "$FILE.txt"
