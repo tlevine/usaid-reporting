@@ -154,7 +154,21 @@ Here are all of the number columns in the metadata spreadsheet.
 
     u <- read.csv('26619efd-1cca-4d86-bf12-b12e8ecb915f.csv')
     u[grep('Number$', names(u), value = T)][c(2,7)]
+    
+http://pdf.usaid.gov/pdf_docs/PDACT673.pdf defines required reporting from contractor as:
+a.  USAID award number (contract, cooperative agreement, grant, etc.), 
+b.  USAID strategic objective title and number (if applicable),
+c.  USAID project title and number (if applicable),
+d.  USAID program area and program element,
+e.  Descriptive title, (if non-English, a translation),
+f.  Author name(s),
+g.  Contractor or grantee name(s),
+h.  Sponsoring USAID Agency operating unit(s), including the name of the current COR[1]
+i.  Date of publication, and
+j.  Language of document
 
+
+[1]  Contract Officer on USAID side 
 
 ### Here's an idea
 1. These are the ones that have the required numbers for the reporting.
