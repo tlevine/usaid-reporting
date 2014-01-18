@@ -135,3 +135,8 @@ Issues with that:
 * Not all reports list the award number
   * (Tom thinks that maybe they should.)
   * They're required to
+  * Sometimes the award number has to stay private, internal
+* Should a project ever have more than one report?
+    Possible, but it sounds unlikely.
+* Multiple projects could have one report.
+* There should be only one award number per report.
