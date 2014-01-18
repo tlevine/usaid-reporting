@@ -35,3 +35,5 @@ for extension in pbm ppm
     break
   done
 done
+
+sed 'some-regex-here' "$file"|head -n1
