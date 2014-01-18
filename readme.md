@@ -165,3 +165,15 @@ Here are all of the number columns in the metadata spreadsheet.
   * Compliaence
   * Maybe people will actually enter the data if a computer figures it all out.
   * Blah blah
+
+
+## The thing we do
+We made spreadsheet with these columns
+
+* PDF.URL: The URL of the PDF file
+* DEC.Project.Number: The project number reported in the DEC data
+* Report.Project.Number: The project number reported in the PDF file
+* Maybe country, region, issue area, &c.
+
+Once we had that spreadsheet, we plotted stuff, comparing and aggregating by
+countries, regions, issue areas, &c.
