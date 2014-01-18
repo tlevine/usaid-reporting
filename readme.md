@@ -154,3 +154,14 @@ Here are all of the number columns in the metadata spreadsheet.
 
     u <- read.csv('26619efd-1cca-4d86-bf12-b12e8ecb915f.csv')
     u[grep('Number$', names(u), value = T)][c(2,7)]
+
+
+### Here's an idea
+1. These are the ones that have the required numbers for the reporting.
+2. This is how we can get the required numbers if they exist in the reports
+    but haven't been entered as metadatataotaa into the DEC.
+3. This is what we can do wonce we have nice catalogs of the id numbers.
+  * Search tmhem
+  * Compliaence
+  * Maybe people will actually enter the data if a computer figures it all out.
+  * Blah blah
