@@ -168,6 +168,8 @@ Here are all of the number columns in the metadata spreadsheet.
 
 
 ## The thing we do
+
+### Step 1
 We made spreadsheet with these columns
 
 * PDF.URL: The URL of the PDF file
@@ -177,3 +179,11 @@ We made spreadsheet with these columns
 
 Once we had that spreadsheet, we plotted stuff, comparing and aggregating by
 countries, regions, issue areas, &c.
+
+And then we'll look at what they say.
+
+### Step 2, maybe
+
+Connect that to [Foreign Assistance dashboard]()
+in order to get the award amaonuts for each project.
+Look at where mhoney has not been tracked at all.
