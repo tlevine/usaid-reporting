@@ -140,3 +140,14 @@ Issues with that:
     Possible, but it sounds unlikely.
 * Multiple projects could have one report.
 * There should be only one award number per report.
+
+Here are all of the number columns in the metadata spreadsheet.
+
+* CD Number
+* Contract/Grant Number
+* NTIS Number
+* Stategic Objective Number
+* Project Number
+* Project Sub Number
+* Report Number
+* USAID Project Number
