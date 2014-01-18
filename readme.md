@@ -151,3 +151,6 @@ Here are all of the number columns in the metadata spreadsheet.
 * Project Sub Number
 * Report Number
 * USAID Project Number
+
+    u <- read.csv('26619efd-1cca-4d86-bf12-b12e8ecb915f.csv')
+    u[grep('Number$', names(u), value = T)][c(2,7)]
